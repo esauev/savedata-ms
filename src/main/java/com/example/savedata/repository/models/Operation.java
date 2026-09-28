@@ -1,0 +1,33 @@
+package com.example.savedata.repository.models;
+
+import java.math.BigDecimal;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Entity
+@Table(name = "operation")
+@Data
+public class Operation {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	private String operacion;
+	
+	private BigDecimal importe;
+	
+	private String cliente;
+	
+	private Integer referencia;
+	
+	private String estatus;
+	
+	private String secreto;
+
+}
